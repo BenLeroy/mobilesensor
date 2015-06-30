@@ -95,6 +95,7 @@ div.panel:hover {
 li.navimenu {
 	display: inline-block;
 	max-height: 1em;
+	margin-top: -15px;
 }
 
 li.filters {
