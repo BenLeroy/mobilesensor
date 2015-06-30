@@ -92,10 +92,13 @@ div.panel:hover {
 	margin-left: 10em;
 }
 
-li.navimenu {
+li.navimenu a{
 	display: inline-block;
-	max-height: 1em;
-	margin-top: -15px;
+	margin-top: -10px;
+}
+
+li.navimenu input{
+	display: inline-block;
 }
 
 li.filters {
