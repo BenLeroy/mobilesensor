@@ -1,0 +1,36 @@
+<div>
+  <div class='row' id="scroller" when-scrolled='moreSensors()'>
+    <ul>
+      <li class='filters' ui-sref="index({status: ['OK']})" ui-sref-opts="{reload: true}">
+        <p class='h4 text-success'>OK
+          <span>
+            <strong class="h4 text-sucess">{{count.OK}}</strong>
+          </span>
+        </p>
+      </li>
+      <li class='filters' ui-sref="index({status: ['NOK', 'Missing']})" ui-sref-opts="{reload: true}">
+        <p class='h4 text-danger'>NOK
+          <span>
+            <strong class="h4 text-danger">{{count.NOK + count.Missing}}</strong>
+          </span>
+        </p>
+      </li>
+    </ul>
+    <h1>Sensors</h1>
+    <br/>
+    <div id="searchTextResults" class="col-lg-3 col-md-6 col-sm-12" ng-repeat='sensor in sensors | filter: searchText'>
+      <div ui-sref='consult({id: sensor.id})' ng-class="{'OK': 'panel panel-success', 'NOK': 'panel panel-danger', 'Missing': 'panel panel-danger', 'Flapping': 'panel panel-warning'}[sensor.status]" class='panel panel-default'>
+        <div class='panel-heading'>
+          {{sensor.key}} <span ng-class="{'OK': 'label label-success pull-right', 'NOK': 'label label-danger pull-right', 'Missing': 'label label-danger pull-right', 'Flapping': 'label label-warning pull-right'}[sensor.status]" class='label label-default pull-right'>{{sensor.status}}</span>
+        </div>
+        <div class='panel-body'>
+          <p>ID : {{sensor.id}} <br/> Name : {{sensor.name}}</p>
+        </div>
+        <div class='panel-footer'>
+          Last check @ {{sensor.checkedAt | date: 'HH:mm:ss (dd-MM-yy)'}} - Availability : {{sensor.availability | number: 3}}%
+        </div>
+      </div>
+    </div>
+    <img id='spinLoad' src="assets/loading.gif" ng-show="loading">
+  </div>
+</div>

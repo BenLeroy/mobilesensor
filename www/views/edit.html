@@ -1,0 +1,46 @@
+<div>
+  <div class='pull-right'>
+    <label>Created</label>
+    <p>{{sensor.createdAt | date:"HH:mm:ss (dd-MM-yyyy)"}}</p>
+    <label>Last modification</label>
+    <p>{{sensor.modifiedAt | date: "HH:mm:ss (dd-MM-yyyy)"}}</p>
+  </div>
+  <h2>Change {{sensor.key}} informations</h2>
+  <div ng-form='formMod' class='fm'>
+    <div class="form-group">
+      <label for="id">ID : {{sensor.id}}</label>
+      <br/>
+   	  <label for="key">Key</label>
+      <input type="text" class="form-control" id='key' ng-model='sensor.key'>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id='name' ng-model='sensor.name'>
+    </div>
+    <div class="form-group">
+      <label for="status">Current status</label>
+      <input type='text' id="status" class="form-control" ng-model='sensor.status' readonly>
+    </div>
+    <div class="form-group">
+      <label for="mailNotif">Send mail notifications</label>
+      <input type="checkbox" id="mailNotif" ng-model="sensor.mailNotif">
+    </div>
+    <div class="form-group">
+      <label for="frequency">Polling frequency</label>
+      <input type='number' id='frequency' ng-model='sensor.frequency'>
+    </div>
+    <div class="form-group">
+      <label for="lag">Expected lag</label>
+      <input type='number' id='lag' ng-model='sensor.lag'>
+    </div>
+      <a type="button" ng-click='SaveMod()' ui-sref='index' class="btn btn-success">
+        <span class='glyphicon glyphicon-ok' aria-hidden='true' title='Confirm'></span>
+      </a>
+      <a type="button" ui-sref='index' class="btn btn-info">
+        <span class='glyphicon glyphicon-stop' aria-hidden='true' title='Cancel'></span>
+      </a>
+      <a type="button" ng-click='delAlert()' class="pull-right btn btn-danger">
+        <span class='glyphicon glyphicon-trash' aria-hidden='true' title='Delete'></span>
+      </a>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+.barnav{
+	background-color: #C0C0C0;
+}
+
+.navbar {
+	min-height: 37px !important;
+}
+
+.navtext{
+	color: #3B5EA9 !important;
+}
+
+li.navbar-text{
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.decal{
+	margin-left: 10%;
+}
+#since{
+	float: right;
+	margin-top: -5em;
+}
+#barretitre{
+	width: 100px;
+}
+
+.navalign{
+	margin-top: -47px;
+	margin-left: 30px !important;
+	display: inline-block;
+}
+
+.fm{
+	width: 80%;
+}
+
+.highlighter {
+	background-color: #FDFD28;
+	margin-right: 5em;
+}
+
+.nohigh {
+	background-color: #FFFFFF;	
+}
+
+.navimenu > a:hover {
+	background-color: black !important;
+	color: white !important;
+}
+
+div[ui-sref] {
+	cursor: pointer;
+}
+
+li[ui-sref] {
+	cursor: pointer;
+}
+
+div.panel:hover {
+	border-color: blue;
+}
+
+.newsFlash {
+	color: #FDFD28;
+}
+
+#scrolling {
+    overflow: auto;
+    position: absolute;
+	top: 50px;
+    left: 2em;
+    right: 0px;
+    bottom: 10px;
+}
+
+#spinLoader {
+	margin-left: 10em;
+}
+
+#scroller {
+    overflow: auto;
+    position: absolute;
+    top: 50px;
+    left: 2em;
+    right: 1.01em;
+    bottom: 0px;
+}
+
+#spinLoad {
+	margin-left: 10em;
+}
+
+li.navimenu {
+	display: inline-block;
+	max-height: 1em;
+	margin-top: -25px;
+}
+
+li.filters {
+	margin-left: 17%;
+	display: inline-block;
+}
+
+.eventlist {
+	margin-left: -7%;
+}
+
+
