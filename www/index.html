@@ -51,6 +51,7 @@
     <div ng-controller="CountCtrl">
     	<nav class="barnav navbar navbar-default navbar-static-top">
         <div class="container-fluid">
+          <div class="navbar-header navbar-left"></div>
           <div class="navbar-left">
           	<ul class="nav navbar-nav ">
             	<li class="navimenu">
@@ -72,8 +73,8 @@
               <li ng-show="socketAlert" class='navbar-text'>
                 <span>Real time update is not available</span>
               </li>
-              <li class='navbar-form' data-ng-show="$state.includes('index')">
-	              <input type="text" ng-model='searchText' ng-change='search()' role='search' placeholder="Search">
+              <li class='navimenu'>
+	              <input data-ng-show="$state.includes('index')" type="text" ng-model='searchText' ng-change='search()' role='search' placeholder="Search">
 	            </li>
             </ul>
           </div>
