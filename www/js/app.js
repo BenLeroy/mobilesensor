@@ -10,7 +10,7 @@
                           );
 
   app.config(function (LoopBackResourceProvider) {
-  	LoopBackResourceProvider.setUrlBase('http://10.117.90.145:3000/api');
+  	LoopBackResourceProvider.setUrlBase('[yourServerAdressHere]/api');
   });
 
   app.config(
@@ -46,7 +46,7 @@
   .factory('socket', function ($rootScope) {
 
   	try {
-  		var socket = io.connect('http://10.117.90.145:3000');
+  		var socket = io.connect('[yourServerAdressHere]');
 
 		  return {
 		    on: function (eventName, callback) {
